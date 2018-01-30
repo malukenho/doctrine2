@@ -144,7 +144,8 @@ class Lemma {
 	/**
 	 *
 	 * @var string
-	 * @Column(type="string", name="lemma_name", unique=true, length=255)
+	 * @Column(type="string", name="lemma_name", length=255)
+     * @UniqueConstraint
 	 */
 	private $lemma;
 
@@ -239,14 +240,16 @@ class Type {
 	/**
 	 *
 	 * @var string
-	 * @Column(type="string", name="type_name", unique=true)
+	 * @Column(type="string", name="type_name")
+     * @UniqueConstraint
 	 */
 	private $type;
 
 	/**
 	 *
 	 * @var string
-	 * @Column(type="string", name="type_abbreviation", unique=true)
+	 * @Column(type="string", name="type_abbreviation")
+     * @UniqueConstraint
 	 */
 	private $abbreviation;
 
@@ -360,7 +363,8 @@ class Phrase {
     private $id;
 
     /**
-     * @Column(type="string", name="phrase_name", unique=true, length=255)
+     * @Column(type="string", name="phrase_name", length=255)
+     * @UniqueConstraint
      */
     private $phrase;
 
@@ -453,12 +457,14 @@ class PhraseType {
     private $id;
 
     /**
-     * @Column(type="string", name="phrase_type_name", unique=true)
+     * @Column(type="string", name="phrase_type_name")
+     * @UniqueConstraint
      */
     private $type;
 
     /**
-     * @Column(type="string", name="phrase_type_abbreviation", unique=true)
+     * @Column(type="string", name="phrase_type_abbreviation")
+     * @UniqueConstraint
      */
     private $abbreviation;
 

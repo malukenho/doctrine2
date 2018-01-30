@@ -9,7 +9,8 @@ namespace Doctrine\Tests\Models\Cache;
 class AttractionContactInfo extends AttractionInfo
 {
     /**
-     * @Column(unique=true)
+     * @Column
+     * @UniqueConstraint
      */
     protected $fone;
 

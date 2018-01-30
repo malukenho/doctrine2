@@ -11,8 +11,7 @@ namespace Doctrine\Tests\Models\DDC1872;
  *              name     = "foo_overridden",
  *              type     = "integer",
  *              length   = 140,
- *              nullable = false,
- *              unique   = false
+ *              nullable = false
  *          )
  *      )
  * })

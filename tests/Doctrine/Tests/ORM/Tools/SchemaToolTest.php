@@ -276,7 +276,8 @@ class UniqueConstraintAnnotationModel
     private $id;
 
     /**
-     * @Column(name="hash", type="string", length=8, nullable=false, unique=true)
+     * @Column(name="hash", type="string", length=8, nullable=false)
+     * @UniqueConstraint
      */
     private $hash;
 }

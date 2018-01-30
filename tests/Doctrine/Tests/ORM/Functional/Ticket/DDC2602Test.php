@@ -247,7 +247,8 @@ class DDC2602BiographyField
     public $id;
 
     /**
-     * @Column(type="string", unique=true, length=100)
+     * @Column(type="string", length=100)
+     * @UniqueConstraint
      */
     public $alias;
 
@@ -291,7 +292,8 @@ class DDC2602BiographyFieldChoice
     public $id;
 
     /**
-     * @Column(type="string", unique=true, length=100)
+     * @Column(type="string", length=100)
+     * @UniqueConstraint
      */
     public $label;
 

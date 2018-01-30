@@ -16,7 +16,8 @@ class Client
     public $id;
 
     /**
-     * @Column(unique=true)
+     * @Column
+     * @UniqueConstraint
      */
     public $name;
 

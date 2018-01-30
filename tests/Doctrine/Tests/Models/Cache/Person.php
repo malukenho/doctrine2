@@ -17,7 +17,8 @@ class Person
     public $id;
 
     /**
-     * @Column(unique=true)
+     * @Column
+     * @UniqueConstraint
      */
     public $name;
 

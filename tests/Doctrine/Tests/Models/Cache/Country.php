@@ -17,7 +17,8 @@ class Country
     protected $id;
 
     /**
-     * @Column(unique=true)
+     * @Column
+     * @UniqueConstraint
      */
     protected $name;
 

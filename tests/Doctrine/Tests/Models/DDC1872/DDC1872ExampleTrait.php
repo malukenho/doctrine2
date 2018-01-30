@@ -11,7 +11,8 @@ trait DDC1872ExampleTrait
     private $id;
 
     /**
-     * @Column(name="trait_foo", type="integer", length=100, nullable=true, unique=true)
+     * @Column(name="trait_foo", type="integer", length=100, nullable=true)
+     * @UniqueConstraint
      */
     protected $foo;
 

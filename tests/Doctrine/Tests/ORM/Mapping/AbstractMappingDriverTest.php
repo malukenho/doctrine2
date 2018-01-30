@@ -220,7 +220,6 @@ abstract class AbstractMappingDriverTest extends OrmTestCase
         $this->assertEquals('string', $class->fieldMappings['name']['type']);
         $this->assertEquals(50, $class->fieldMappings['name']['length']);
         $this->assertTrue($class->fieldMappings['name']['nullable']);
-        $this->assertTrue($class->fieldMappings['name']['unique']);
 
         return $class;
     }
@@ -856,7 +855,6 @@ abstract class AbstractMappingDriverTest extends OrmTestCase
         $this->assertEquals('guest_name', $guestMetadata->fieldMappings['name']['columnName']);
         $this->assertEquals(240, $guestMetadata->fieldMappings['name']['length']);
         $this->assertFalse($guestMetadata->fieldMappings['name']['nullable']);
-        $this->assertTrue($guestMetadata->fieldMappings['name']['unique']);
     }
 
     /**
@@ -1103,7 +1101,8 @@ class User
     public $id;
 
     /**
-     * @Column(length=50, nullable=true, unique=true, options={"foo": "bar", "baz": {"key": "val"}, "fixed": false})
+     * @Column(length=50, nullable=true, options={"foo": "bar", "baz": {"key": "val"}, "fixed": false})
+     * @UniqueConstraint
      */
     public $name;
 
@@ -1188,7 +1187,7 @@ class User
            'fieldName' => 'name',
            'type' => 'string',
            'length' => 50,
-           'unique' => true,
+//           'unique' => true,
            'nullable' => true,
            'columnName' => 'name',
            'options' => ['foo' => 'bar', 'baz' => ['key' => 'val'], 'fixed' => false],
@@ -1266,7 +1265,7 @@ class User
             [
             'name' => 'user_id',
             'referencedColumnName' => 'id',
-            'unique' => false,
+//            'unique' => false,
             'nullable' => false,
             ],
            ],
@@ -1480,7 +1479,7 @@ class Comment
             'type' => 'text',
             'scale' => 0,
             'length' => NULL,
-            'unique' => false,
+//            'unique' => false,
             'nullable' => false,
             'precision' => 0,
             'columnName' => 'content',

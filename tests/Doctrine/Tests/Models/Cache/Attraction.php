@@ -25,7 +25,8 @@ abstract class Attraction
     protected $id;
 
     /**
-     * @Column(unique=true)
+     * @Column
+     * @UniqueConstraint
      */
     protected $name;
 

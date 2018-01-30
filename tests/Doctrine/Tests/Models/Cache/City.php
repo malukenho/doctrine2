@@ -19,7 +19,8 @@ class City
     protected $id;
 
     /**
-     * @Column(unique=true)
+     * @Column
+     * @UniqueConstraint
      */
     protected $name;
 

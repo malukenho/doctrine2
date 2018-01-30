@@ -57,11 +57,6 @@ final class Column implements Annotation
     /**
      * @var boolean
      */
-    public $unique = false;
-
-    /**
-     * @var boolean
-     */
     public $nullable = false;
 
     /**

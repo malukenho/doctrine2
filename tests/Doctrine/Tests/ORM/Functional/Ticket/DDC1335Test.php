@@ -159,7 +159,8 @@ class DDC1335User
     public $id;
 
     /**
-     * @Column(type="string", unique=true)
+     * @Column(type="string")
+     * @UniqueConstraint
      */
     public $email;
 

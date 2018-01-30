@@ -18,7 +18,8 @@ class User
     public $id;
 
     /**
-     * @Column(length=50, nullable=true, unique=true)
+     * @Column(length=50, nullable=true)
+     * @UniqueConstraint
      */
     public $name;
 
@@ -53,7 +54,7 @@ class User
     /**
      * @ManyToMany(targetEntity="Doctrine\Tests\ORM\Tools\Export\Group", cascade={"all"}, fetch="EXTRA_LAZY")
      * @JoinTable(name="cms_users_groups",
-     *    joinColumns={@JoinColumn(name="user_id", referencedColumnName="id", nullable=false, unique=false)},
+     *    joinColumns={@JoinColumn(name="user_id", referencedColumnName="id", nullable=false)},
      *    inverseJoinColumns={@JoinColumn(name="group_id", referencedColumnName="id", columnDefinition="INT NULL")}
      * )
      */

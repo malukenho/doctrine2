@@ -20,7 +20,8 @@ class LegacyCar
     public $_users;
 
     /**
-     * @Column(name="sDescription", type="string", length=255, unique=true)
+     * @Column(name="sDescription", type="string", length=255)
+     * @UniqueConstraint
      */
     public $_description;
 

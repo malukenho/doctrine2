@@ -17,7 +17,8 @@ class TravelerProfile
     protected $id;
 
     /**
-     * @Column(unique=true)
+     * @Column
+     * @UniqueConstraint
      */
     private $name;
 

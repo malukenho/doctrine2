@@ -115,7 +115,8 @@ class Lemma {
     /**
      *
      * @var string
-     * @Column(type="string", name="lemma_name", unique=true, length=255)
+     * @Column(type="string", name="lemma_name", length=255)
+     * @UniqueConstraint
      */
     private $lemma;
 
@@ -328,14 +329,16 @@ class RelationType {
     /**
      *
      * @var string
-     * @Column(type="string", name="relation_type_name", unique=true, length=255)
+     * @Column(type="string", name="relation_type_name", length=255)
+     * @UniqueConstraint
      */
     private $type;
 
     /**
      *
      * @var string
-     * @Column(type="string", name="relation_type_abbreviation", unique=true, length=255)
+     * @Column(type="string", name="relation_type_abbreviation", length=255)
+     * @UniqueConstraint
      */
     private $abbreviation;
 

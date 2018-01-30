@@ -17,7 +17,8 @@ class LegacyUser
      */
     public $_id;
     /**
-     * @Column(name="sUsername", type="string", length=255, unique=true)
+     * @Column(name="sUsername", type="string", length=255)
+     * @UniqueConstraint
      */
     public $_username;
     /**

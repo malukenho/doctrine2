@@ -130,7 +130,8 @@ class CmsUser
      */
     public $status;
     /**
-     * @Column(type="string", length=255, unique=true)
+     * @Column(type="string", length=255)
+     * @UniqueConstraint
      */
     public $username;
     /**

@@ -19,7 +19,8 @@ class State
     protected $id;
 
     /**
-     * @Column(unique=true)
+     * @Column
+     * @UniqueConstraint
      */
     protected $name;
 
